@@ -18,7 +18,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        producer = Producer(row['name'], row['location'], row['description'])
+        producer = Producer(row['name'], row['location'], row['description'], row['id'])
         producers.append(producer)
     return producers
 

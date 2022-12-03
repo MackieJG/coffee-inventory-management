@@ -19,7 +19,7 @@ def select_all():
 
     for row in results:
         producer = producer_repository.select[row['producer_id']]
-        equipment1 = Equipment(row['name'], producer, row['stock'], row['buy_price'], row['sell_price'])
+        equipment1 = Equipment(row['name'], producer, row['stock'], row['buy_price'], row['sell_price'], row['id'])
         equipment.append(equipment1)
     return equipment
 
