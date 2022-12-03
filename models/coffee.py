@@ -9,7 +9,5 @@ class Coffee():
         self.sell_price = sell_price
         self.id = id
 
-    def mark_up(buy_price, sell_price):
-        return ((buy_price - sell_price) / sell_price) * 100
 
    

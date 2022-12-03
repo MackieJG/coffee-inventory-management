@@ -6,7 +6,7 @@ from models.equipment import Equipment
 import repositories.producer_repository as producer_repository
 
 def save(equipment):
-    sql = "INSERT INTO equipment (name, producer, stock, buy_price, sell_price) VALUES (%s, %s, %s, %s, %s)"
+    sql = "INSERT INTO equipment (name, producer_id, stock, buy_price, sell_price) VALUES (%s, %s, %s, %s, %s) RETURNING *"
     values = [equipment.name, equipment.producer.id, equipment.stock, equipment.buy_price, equipment.sell_price]
     results = run_sql(sql, values)
     equipment.id = results[0]['id']
@@ -31,4 +31,16 @@ def select(id):
 
     if results:
         result = results[0]
-        equipment = Equipment(result['name'], result['producer_id'], result[''])
+        equipment = Equipment(result['name'], result['producer_id'], result['stock'], result['buy_price'], result['sell_price'])
+    return equipment
+
+def delete_all():
+    sql = "DELETE FROM equipment"
+    run_sql(sql)
+
+def delete(id):
+    sql = "DELETE FROM equipment WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+    
