@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+{% for producer in all_producers %}
+    <div class="producers">
+        <div class="producer_content">
+            <a href="/producers/{{producer.id}}">{{producer.name}}</a>
+        
+            <div class="producer_location">
+                {{producer.location}}
+            </div>
+            <div class="producer_description">
+                {{producer.description}}
+            </div>
+        </div>
+    </div>
+    
+{% endfor %}
+
+{% endblock content %}
