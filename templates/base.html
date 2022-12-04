@@ -4,26 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css') }}">
     <title>Inventory Manager</title>
 </head>
 <body>
-    <header>
-        <ul class="header-menu">
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/inventory">Inventory</a>
-            </li>
-            <li>
-                <a href="/equipment">Equipment</a>
-            </li>
-            <li>
-                <a href="/coffees">Coffees</a>
-            </li>
-            <li>
-                <a href="/producers">Producers</a>
-            </li>
+    <header class="header">
+        <ul class="header-ul">
+            <div>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+            </div>
+            <div>
+                <li>
+                    <a href="/inventory">Inventory</a>
+                </li>
+            </div>
+            <div>
+                <li>
+                    <a href="/equipment">Equipment</a>
+                </li>
+            </div>
+            <div>
+                <li>
+                    <a href="/coffees">Coffees</a>
+                </li>
+            </div>
+            <div>
+                <li>
+                    <a href="/producers">Producers</a>
+                </li>
+            </div>
         </ul>
     </header>
     {% block content %}

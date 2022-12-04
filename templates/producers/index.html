@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-    
+    <a href="producers/newproducer">Add new Producer to your list</a>
 {% for producer in all_producers %}
     <div class="producers">
         <div class="producer_content">
-            <a href="/producers/{{producer.id}}">{{producer.name}}</a>
+            <a href="/producers/{{ producer.id }}">{{producer.name}}</a>
         
             <div class="producer_location">
                 {{producer.location}}

@@ -16,7 +16,7 @@ def show_producer(id):
     producer = producer_repository.select(id)
     return render_template('producers/producer.html', producer = producer)
 
-@producers_blueprint.route('/producers/new', methods=['GET'])
+@producers_blueprint.route('/producers/newproducer', methods=['GET'])
 def new_producer():
     return render_template('producers/newproducer.html')
 
@@ -27,4 +27,22 @@ def create_producer():
     description = request.form['description']
     producer = Producer(name, location, description)
     producer_repository.save(producer)
+    return redirect('/producers')
+
+@producers_blueprint.route('/producers/<id>/delete', methods=['POST'])
+def delete_producer(id):
+    producer_repository.delete(id)
+    return redirect('/producer')
+
+@producers_blueprint.route('/producers/<id>/edit', methods=['GET'])
+def edit_producer(id):
+    producer = producer_repository.select(id)
+    return render_template('producers/edit.html', producer = producer)
+
+@producers_blueprint.route('/producers/<id>', methods=['POST'])
+def update_producer(id):
+    name = request.form['name']
+    location = request.form['location']
+    description = request.form['description']
+    producer = Producer(name, location, description)
     return redirect('/producers')
