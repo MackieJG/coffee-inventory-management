@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+{% for coffee in all_coffees %}
+    <div class="coffee">
+        <div class="coffee_content">
+            <a href="/coffees/{{coffee.id}}">{{coffee.name}}</a>
+        
+            <div class="coffee_origin">
+                {{coffee.origin}}
+            </div>
+            <div class="coffee_description">
+                {{coffee.description}}
+            </div>
+            <div class="coffee_producer">
+                {{coffee.producer.id}}
+            </div>
+            <div class="coffee_stock">
+                {{coffee.stock}}
+            </div>
+            <div class="coffee_buy_price">
+                {{coffee.buy_price}}
+            </div>
+            <div class="coffee_sell_price">
+                {{coffee.sell_price}}
+            </div>
+            <div class="coffee_sell_price">
+                {{coffee.id}}
+            </div>
+        </div>
+        </div>
+    </div>
+    
+{% endfor %}
+
+{% endblock content %}

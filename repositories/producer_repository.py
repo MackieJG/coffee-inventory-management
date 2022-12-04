@@ -42,3 +42,8 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
+def update(producer):
+    sql = "UPDATE producers SET (name, location, description) VALUES (%s, %s, %s) WHERE id is %s"
+    values = [producer.name, producer.location, producer.description, producer.id]
+    run_sql(sql, values)
+
