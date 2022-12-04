@@ -14,9 +14,9 @@ def all_coffees():
     coffees = coffee_repository.select_all()
     return render_template('coffees/index.html', all_coffees = coffees)
 
-@coffees_blueprint.route('/coffees/<id>', methods=['GET'])
+@coffees_blueprint.route('/coffees/<int:id>', methods=['GET'])
 def show_coffee(id):
-    coffee = coffee_repository.select(int(id))
+    coffee = coffee_repository.select(id)
     return render_template('coffees/coffee.html', coffee = coffee)
 
 @coffees_blueprint.route('/coffees/newcoffee', methods=['GET'])
