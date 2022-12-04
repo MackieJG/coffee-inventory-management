@@ -20,7 +20,7 @@ def select_all():
 
     for row in results:
         producer = producer_repository.select(row['producer_id'])
-        coffee = Coffee(row['name'], row['origin'], row['description'], producer, row['stock'], row['buy_price'], row['sell_price'])
+        coffee = Coffee(row['name'], row['origin'], row['description'], producer, row['stock'], row['buy_price'], row['sell_price'], row['id'])
         coffees.append(coffee)
     return coffees
 
@@ -34,7 +34,7 @@ def select(id):
     if results:
         result = results[0]
         producer = producer_repository.select(result['producer_id'])
-        coffee = Coffee(result['name'], result['origin'], result['description'], producer, result['buy_price'], result['sell_price'])
+        coffee = Coffee(result['name'], result['origin'], result['description'], producer, result['buy_price'], result['sell_price'], result['id'])
     return coffee
 
 def delete_all():

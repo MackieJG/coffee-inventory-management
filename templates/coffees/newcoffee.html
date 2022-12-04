@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="/coffees" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required autofcus>
+        </div>
+        <div>
+            <label for="origin">Origin:</label>
+            <input type="text" id="origin" name="origin" required autofcus>
+        </div>
+        <div>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required autofcus>
+        </div>
+        <div>
+            <label for="producer">Producer:</label>
+            <select id="producer" name="producer_id">
+                {% for producer in all_producers %}
+                    <option value="'{{ producer.id }}">{{ producer.name}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="stock">Stock:</label>
+            <input id="stock" name="stock" required autofocus>
+        </div>
+        <div>
+            <label for="buy_price">Buy Price:</label>
+            <input id="buy_price" name="buy_price" required autofocus>
+        </div>
+        <div>
+            <label for="sell_price">Sell Price:</label>
+            <input id="sell_price" name="sell_price" required autofocus>
+        </div>
+        <button type="submit">Add Coffee</button>
+    </form>
+{% endblock %}

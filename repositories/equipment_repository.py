@@ -18,7 +18,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        producer = producer_repository.select[row['producer_id']]
+        producer = producer_repository.select(row['producer_id'])
         equipment1 = Equipment(row['name'], producer, row['stock'], row['buy_price'], row['sell_price'], row['id'])
         equipment.append(equipment1)
     return equipment
@@ -31,7 +31,8 @@ def select(id):
 
     if results:
         result = results[0]
-        equipment = Equipment(result['name'], result['producer_id'], result['stock'], result['buy_price'], result['sell_price'])
+        producer = producer_repository.select(result['producer_id'])
+        equipment = Equipment(result['name'], producer, result['stock'], result['buy_price'], result['sell_price'], result['id'])
     return equipment
 
 def delete_all():
