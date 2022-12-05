@@ -64,7 +64,7 @@ def delete_coffee(id):
     coffee_repository.delete(id)
     return redirect('/coffees')
 
-@coffees_blueprint.route('/inventory', methods=['POST'])
+@coffees_blueprint.route('/inventory')
 def show_all_stock():
     coffees = coffee_repository.select_all()
     equipment = equipment_repository.select_all()

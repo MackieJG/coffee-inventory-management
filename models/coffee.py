@@ -9,5 +9,11 @@ class Coffee():
         self.sell_price = sell_price
         self.id = id
 
+    def mark_up(self):
+        self.stock * 1000
+        return ((self.buy_price - self.sell_price) / self.sell_price) * 100
+
+   
+    
 
    
