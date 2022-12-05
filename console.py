@@ -36,12 +36,12 @@ producer_repository.save(producer9)
 producer_repository.save(producer10)
 
 
-coffee1 = Coffee('Paraiso','Brazil', 'Mundo Novo / Yellow Catuai / Red Catuai - Pulp Natural', producer2, 50, 650, 7.50)
-coffee2 = Coffee('Suarez','Colombia', 'Caturra / Typica / Colombia - Washed', producer3, 100, 1100, 8.10)
-coffee3 = Coffee('Yermy Pedraza','Colombia', 'Colombia - Natural Anaerobic', producer3, 30, 550, 10.50)
-coffee4 = Coffee('Blue Mountain AA','Kenya', 'Bourbon / Kent / SL28 - Washed', producer5, 120, 1200, 9.50)
-coffee5 = Coffee('Finca Medina','Guatemala', 'Marsellesa / Bourbon / Caturra - Natural', producer1, 50, 650, 7.50)
-coffee6 = Coffee('Daterra Masterpiece','Brazil', 'Geisha - Natural', producer4, 70, 1800, 23.50)
+coffee1 = Coffee('Paraiso','Brazil', 'Mundo Novo / Yellow Catuai / Red Catuai - Pulp Natural', producer2, 50, 3.50, 7.50)
+coffee2 = Coffee('Suarez','Colombia', 'Caturra / Typica / Colombia - Washed', producer3, 100, 4.50, 8.10)
+coffee3 = Coffee('Yermy Pedraza','Colombia', 'Colombia - Natural Anaerobic', producer3, 30, 5.00, 10.50)
+coffee4 = Coffee('Blue Mountain AA','Kenya', 'Bourbon / Kent / SL28 - Washed', producer5, 120, 3.50, 9.50)
+coffee5 = Coffee('Finca Medina','Guatemala', 'Marsellesa / Bourbon / Caturra - Natural', producer1, 50, 3.50, 7.50)
+coffee6 = Coffee('Daterra Masterpiece','Brazil', 'Geisha - Natural', producer4, 2, 5, 10.00)
 coffee_repository.save(coffee1)
 coffee_repository.save(coffee2)
 coffee_repository.save(coffee3)
@@ -51,7 +51,7 @@ coffee_repository.save(coffee6)
 
 
 
-equipment1 = Equipment('Spirit Coffee Machine', producer9, 3, 10000, 17000)
+equipment1 = Equipment('Spirit Coffee Machine', producer9, 0, 10000, 17000)
 equipment2 = Equipment('Water for Coffee', producer6, 10, 6, 9)
 equipment3 = Equipment('250g coffee bags', producer7, 150, 0.4, 0.6)
 equipment4 = Equipment('moccamaster', producer10, 30, 100, 180)

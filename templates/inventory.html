@@ -6,6 +6,11 @@
         {% for equipment in all_equipment %}
             <p>{{equipment.name}}</p>
             <p>{{equipment.stock}}</p>
+            {% if equipment.stock == 0 %}
+                <p>SOLD OUT</p>
+                {% elif equipment.stock < 5 %}
+                <p>Speak to your producer!</p>
+            {% endif %}
         {% endfor %}
     </div>
 </section>
@@ -14,6 +19,11 @@
         {% for coffee in all_coffees %}
             <p>{{coffee.name}}</p>
             <p>{{coffee.stock}}</p>
+            {% if coffee.stock == 0 %}
+            <p>SOLD OUT</p>
+            {% elif coffee.stock < 5 %}
+            <p>Speak to your producer!</p>
+            {% endif %}
         {% endfor %}
     </div>
 </section>
