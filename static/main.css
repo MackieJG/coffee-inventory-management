@@ -4,28 +4,39 @@ body {
 }
 .header {
     background-color: rgb(140, 140, 238);
-    
-}
-.header {
-
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
     align-content: center;
     width: 100%;
-    height: 80px;
+    height: 90px;
     overflow: auto;
-    flex-direction: row;
-    
-
+    list-style-type: none;
 }
-.header-ul{
+.header li a{
+    color: black;
+    
+}
+
+.header li a:hover{
+    text-decoration: none;
+}
+
+.footer-menu {
+    background-color: rgb(140, 140, 238);
     display: flex;
-    list-style: none;
-    width: 40px;
-    height: 10px;
-    margin: 5px;
-    background-color: rgb(228, 238, 241);
-    padding: 35px;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    height: 90px;
+    width: 100%;
+    overflow: auto;
+    list-style-type: none;
+    
+}
+
+.footer-menu li a{
+    color: black;
 }
