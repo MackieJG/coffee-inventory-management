@@ -4,4 +4,7 @@
     <p>{{ producer.location }}</p>
     <p>{{ producer.description }}</p>
     <p><a href="/producers/{{producer.id}}/edit">Edit</a></p>
+    <form class="delete-form" action="/producers/{{producer.id}}/delete" method="POST">
+        <button class="trash-button">Remove it</button>
+      </form>
 {% endblock %}

@@ -47,5 +47,4 @@ def delete(id):
 def update(equipment):
     sql = "UPDATE equipment SET (name, producer_id, stock, buy_price, sell_price) = (%s, %s, %s, %s, %s) WHERE id = %s"
     values = [equipment.name, equipment.producer.id, equipment.stock, equipment.buy_price, equipment.sell_price, equipment.id]
-    breakpoint()
     run_sql(sql, values)

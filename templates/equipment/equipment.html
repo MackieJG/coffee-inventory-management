@@ -9,6 +9,9 @@
     <p>{{ equipment.buy_price }}</p>
     <p>{{ equipment.sell_price }}</p>
     <p><a href="/equipment/{{equipment.id}}/edit">Edit</a></p>
+    <form class="delete-form" action="/equipment/{{equipment.id}}/delete" method="POST">
+        <button class="trash-button">Remove it</button>
+    </form>
 </div>
 
 {% endblock %}

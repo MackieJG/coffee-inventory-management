@@ -17,11 +17,13 @@ def show_equipment(id):
     equipment = equipment_repository.select(id)
     return render_template('equipment/equipment.html', equipment = equipment)
 
-@equipment_blueprint.route('/equipment', )
+@equipment_blueprint.route('/equipment/new', methods=['GET'])
+def new_equipment():
+    producers = producer_repository.select_all()
+    return render_template('equipment/new.html', all_producers = producers)
 
 @equipment_blueprint.route('/equipment/<id>/edit', methods=['GET'])
 def edit_equipment(id):
-
     equipment = equipment_repository.select(id)
     producers = producer_repository.select_all()
     return render_template('equipment/edit.html', equipment = equipment, all_producers = producers)

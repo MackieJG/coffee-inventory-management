@@ -4,10 +4,13 @@
         <p>{{coffee.name}}</p>
         <p>{{coffee.origin}}</p>
         <p>{{coffee.description}}</p>
-        <p>{{coffee.producer.id}}</p>
-        <p>{{coffee.stock}}</p>
-        <p>{{coffee.buy_price}}</p>
-        <p>{{coffee.sell_price}}</p>
+        <p>{{coffee.producer.name}}</p>
+        <p>{{coffee.stock}} kilos</p>
+        <p>£{{coffee.buy_price}}</p>
+        <p>£{{coffee.sell_price}} per bag</p>
         <p><a href="/coffees/{{coffee.id}}/edit">Edit</a></p>
+        <form class="delete-form" action="/coffees/{{coffee.id}}/delete" method="POST">
+            <button class="trash-button">Remove it</button>
+          </form>
     </div>
 {% endblock %}

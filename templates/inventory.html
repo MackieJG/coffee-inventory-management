@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h4>Everything You Have</h4>
+    {% for equipment in all_equipment %}
+        <p>{{equipment.name}}</p>
+        <p>{{equipment.stock}}</p>
+        <p>{{equipment.mark_up}}</p>
+    {% endfor %}
+    {% for coffee in all_coffees %}
+        <p>{{coffee.name}}</p>
+        <p>{{coffee.stock}}</p>
+        <p>{{coffee.mark_up}}</p>
+    {% endfor %}
+{% endblock %}

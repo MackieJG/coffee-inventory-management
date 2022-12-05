@@ -32,7 +32,7 @@ def create_producer():
 @producers_blueprint.route('/producers/<id>/delete', methods=['POST'])
 def delete_producer(id):
     producer_repository.delete(id)
-    return redirect('/producer')
+    return redirect('/producers')
 
 @producers_blueprint.route('/producers/<id>/edit', methods=['GET'])
 def edit_producer(id):

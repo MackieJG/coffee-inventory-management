@@ -1,40 +1,41 @@
 {% extends 'base.html' %}
 {% block content %}
-    <form action="/coffees/{{coffees.id}}" method="post">
+    <form action="/coffees/{{coffee.id}}" method="post">
         <div>
             <label for="name">Name:</label>
-            <input type="text" id="name" value="{{coffee.name}}">
+            <input type="text" id="name" name="name" value="{{coffee.name}}">
         </div>
         <div>
             <label for="origin">Origin:</label>
-            <select id="origin" name="origin"></select>
+            <input type="text" id="origin" name="origin" value="{{coffee.origin}}">
         </div>
         <div>
             <label for="description">Description:</label>
-            <select type="text" id="description" value="{{coffee.description}}"></select>
+            <input type="text" id="description" name="description" value="{{coffee.description}}">
         </div>
         <div>
             <label for="producer">Producer:</label>
-            <select id="producer" nam="producer_id">
+            <select id="producer" name="producer_id">
                 {% for producer in all_producers %}
                     <option value="{{ producer.id }}"
-                    {% if coffee.producer.id == producer.id %} selected="selected" {% endif %}>
-                    {{ producer.name }}
-                </option>
+                        {% if coffee.producer.id == producer.id %} selected="selected" {% endif %}>
+                        {{ producer.name }}
+                    </option>
                 {% endfor %}
             </select>
         </div>
         <div>
             <label for="stock">Stock:</label>
-            <select type="text" id="stock" value="{{coffee.stock}}"></select>
+            <input type="text" id="stock" name="stock" value="{{coffee.stock}}">
         </div>
         <div>
             <label for="buy_price">Buy Price:</label>
-            <select type="text" id="buy_price" value="{{cofffee.buy_price}}"></select>
+            <input type="text" id="buy_price" name="buy_price" value="{{coffee.buy_price}}">
         </div>
         <div>
             <label for="sell_price">Sell Price:</label>
-            <select type="text" id="sell_price" value="{{coffee.sell_price}}"></select>
+            <input type="text" id="sell_price" name= "sell_price" value="{{coffee.sell_price}}">
         </div>
+        <input type="submit" value="update_coffee">
     </form>
 {% endblock %}

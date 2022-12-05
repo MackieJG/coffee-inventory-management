@@ -34,7 +34,7 @@ def select(id):
     if results:
         result = results[0]
         producer = producer_repository.select(result['producer_id'])
-        coffee = Coffee(result['name'], result['origin'], result['description'], producer, result['buy_price'], result['sell_price'], result['id'])
+        coffee = Coffee(result['name'], result['origin'], result['description'], producer, result['stock'], result['buy_price'], result['sell_price'], result['id'])
     return coffee
 
 def delete_all():
