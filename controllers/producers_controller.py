@@ -44,5 +44,6 @@ def update_producer(id):
     name = request.form['name']
     location = request.form['location']
     description = request.form['description']
-    producer = Producer(name, location, description)
+    producer = Producer(name, location, description, id)
+    producer_repository.update(producer)
     return redirect('/producers')
