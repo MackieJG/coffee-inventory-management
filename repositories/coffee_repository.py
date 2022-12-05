@@ -8,9 +8,9 @@ import repositories.producer_repository as producer_repository
 def save(coffee):
     sql = "INSERT INTO coffees (name, origin, description, producer_id, stock, buy_price, sell_price) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING *"
     values = [coffee.name, coffee.origin, coffee.description, coffee.producer.id, coffee.stock, coffee.buy_price, coffee.sell_price]
-    result = run_sql(sql, values)[0]
-    result_id = result['id']
-    coffee.id = result_id
+    results = run_sql(sql, values)
+    id = results[0]['id']
+    coffee.id = id
     return coffee
 
 def select_all():

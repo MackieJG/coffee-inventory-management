@@ -17,6 +17,8 @@ def show_equipment(id):
     equipment = equipment_repository.select(id)
     return render_template('equipment/equipment.html', equipment = equipment)
 
+@equipment_blueprint.route('/equipment', )
+
 @equipment_blueprint.route('/equipment/<id>/edit', methods=['GET'])
 def edit_equipment(id):
 
@@ -39,3 +41,17 @@ def update_equipment(id):
 def delete_equipment(id):
     equipment_repository.delete(id)
     return redirect('/equipment')
+
+@equipment_blueprint.route('/equipment', methods=['POST'])
+def create_equipment():
+    name = request.form['name']
+    producer_id = request.form['producer_id']
+    producer = producer_repository.select(producer_id)
+    stock = request.form['stock']
+    buy_price = request.form['buy_price']
+    sell_price = request.form['sell_price']
+    equipment = Equipment(name, producer, stock, buy_price, sell_price)
+    equipment_repository.save(equipment)
+    return redirect('/equipment')
+
+

@@ -47,3 +47,4 @@ def update_producer(id):
     producer = Producer(name, location, description, id)
     producer_repository.update(producer)
     return redirect('/producers')
+

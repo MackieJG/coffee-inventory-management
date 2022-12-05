@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="/equipment" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="producer">Producer:</label>
+            <select id="producer" name="producer_id">
+                {% for producer in all_producers %}
+                    <option value="{{ producer.id }}">{{ producer.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="stock">Stock:</label>
+            <input type="text" id="stock" name="stock">
+        </div>
+        <div>
+            <label for="buy_price">Buy Price:</label>
+            <input type="text" id="buy_price" name="buy_price">
+        </div>
+        <div>
+            <label for="sell_price" name="sell_price">Sell Price:</label>
+            <input type="text" id="sell_price" name="sell_price">
+        </div>
+        <button type="submit">Add Equipment</button>
+    </form>
+{% endblock %}

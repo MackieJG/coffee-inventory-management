@@ -17,7 +17,7 @@
             <label for="producer">Producer:</label>
             <select id="producer" name="producer_id">
                 {% for producer in all_producers %}
-                    <option value="'{{ producer.id }}">{{ producer.name}}</option>
+                    <option value="{{ producer.id }}">{{ producer.name }}</option>
                 {% endfor %}
             </select>
         </div>

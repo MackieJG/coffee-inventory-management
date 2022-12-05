@@ -30,7 +30,7 @@ def select(id):
 
     if results:
         result = results[0]
-        producer = Producer(result['name'], result['location'], result['description'])
+        producer = Producer(result['name'], result['location'], result['description'], result['id'])
     return producer
 
 def delete_all():
@@ -43,7 +43,8 @@ def delete(id):
     run_sql(sql, values)
 
 def update(producer):
-    sql = "UPDATE producers SET (name, location, description) VALUES (%s, %s, %s) WHERE id is %s"
+    sql = "UPDATE producers SET (name, location, description) = (%s, %s, %s) WHERE id = %s"
     values = [producer.name, producer.location, producer.description, producer.id]
+    
     run_sql(sql, values)
 

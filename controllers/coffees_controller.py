@@ -29,7 +29,8 @@ def create_coffee():
     name = request.form['name']
     origin = request.form['origin']
     description = request.form['description']
-    producer = producer_repository.select(request.form['producer_id'])
+    producer_id = request.form['producer_id']
+    producer = producer_repository.select(producer_id)
     stock = request.form['stock']
     buy_price = request.form['buy_price']
     sell_price = request.form['sell_price']

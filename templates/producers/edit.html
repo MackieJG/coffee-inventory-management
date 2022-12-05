@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-    <form action ="/producer/{{producer.id}}" method="post">
+    <form action ="/producers/{{producer.id}}" method="post">
         <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" value="{{producer.name}}">
@@ -15,7 +15,7 @@
             <input type="text" id="description" name="description" value="{{producer.description}}">
         </div>
         <div>
-            <button type="submit" value="update equipment">Update Equipment</button>
+            <button type="submit">Update Equipment</button>
         </div>
     </form>
 {% endblock %}
