@@ -2,16 +2,30 @@
 
 {% block content %}
 
-<div>
-    <p>{{ equipment.name }}</p>
+<div class="coffee_container">
+    <div>
+        <p>{{ equipment.name }}</p>
+    </div>
+    <div>
     <p>{{ equipment.producer.name }}</p>
-    <p>{{ equipment.stock }}</p>
+    </div>
+    <div>
+        <p>{{ equipment.stock }}</p>
+    </div>
+    <div>
     <p>{{ equipment.buy_price }}</p>
+    </div>
+    <div>
     <p>{{ equipment.sell_price }}</p>
+    </div>
+    <div>
     <p><a href="/equipment/{{equipment.id}}/edit">Edit</a></p>
+    </div>
+    <div>
     <form class="delete-form" action="/equipment/{{equipment.id}}/delete" method="POST">
         <button class="trash-button">Remove it</button>
     </form>
+    </div>
 </div>
 
 {% endblock %}

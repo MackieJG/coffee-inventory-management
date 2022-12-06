@@ -1,10 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
-    <p>{{ producer.name }}</p>
-    <p>{{ producer.location }}</p>
-    <p>{{ producer.description }}</p>
+<div class="coffee_container">
+  <div>
+    <p>Name: {{ producer.name }}</p>
+  </div>
+  <div>
+    <p>Location: {{ producer.location }}</p>
+  </div>
+  <div>
+    <p>Description: {{ producer.description }}</p>
+  </div>
+  <div>
     <p><a href="/producers/{{producer.id}}/edit">Edit</a></p>
+  </div>
+  <div>
     <form class="delete-form" action="/producers/{{producer.id}}/delete" method="POST">
         <button class="trash-button">Remove it</button>
       </form>
+  </div>
+</div>
 {% endblock %}
