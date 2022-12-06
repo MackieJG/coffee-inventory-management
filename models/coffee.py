@@ -11,7 +11,7 @@ class Coffee():
 
     def mark_up(self):
         if self.buy_price == 0:
-            return self.sell_price * 100
+            return "Nothing paid for this product"
         return round(((self.sell_price - self.buy_price) / self.buy_price) * 100,2)
 
 
