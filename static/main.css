@@ -258,6 +258,12 @@ body {
     border: 2px solid rgb(61, 7, 197);
     border-radius: 10px;
 }
+.edit_container button{
+    width: 200px;
+    box-sizing:border-box;
+    border: 2px solid rgb(61, 7, 197);
+    border-radius: 10px;
+}
 
 .equipment_ref {
     text-align: center;
@@ -330,4 +336,26 @@ body {
     overflow: auto;
     flex-direction: row;
     border-style: solid;
+}
+.producer_content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: stretch;
+    align-content: center;
+    width: 100%;
+    height: 100px;
+    overflow: auto;
+    flex-direction: row;
+    border-style: solid;
+   
+}
+.inventory_section{
+    text-align: center;
+    border-style: double;
+    
+}
+.inventory_section div{
+    border-style: double;
+    font-size: large;
 }

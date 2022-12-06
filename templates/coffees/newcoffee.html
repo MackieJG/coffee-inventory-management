@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="edit_container">
     <form action="/coffees" method="post">
         <div>
             <label for="name">Name:</label>
@@ -35,4 +36,5 @@
         </div>
         <button type="submit">Add Coffee</button>
     </form>
+</div>
 {% endblock %}

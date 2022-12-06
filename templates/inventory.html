@@ -1,32 +1,36 @@
 {% extends 'base.html' %}
 {% block content %}
-<section class="equipment_list">
+<section class="inventory_section">
     <div>
         <h4>Everything You Have</h4>
         {% for equipment in all_equipment %}
-            <p>{{equipment.name}}</p>
-            <p>{{equipment.stock}}</p>
+        <div>
+            <p>Name: {{equipment.name}}</p>
+            <p>Stock: {{equipment.stock}}</p>
             {% if equipment.stock == 0 %}
                 <p>SOLD OUT</p>
                 {% elif equipment.stock < 5 %}
                 <p>Speak to your producer!</p>
             {% endif %}
+        </div>
         {% endfor %}
     </div>
 </section>
-<section class="coffee_list">
+<section class="inventory_section">
     <div>
         {% for coffee in all_coffees %}
-            <p>{{coffee.name}}</p>
-            <p>{{coffee.stock}}</p>
-            <div class="sold_out">
+        <div>
+            <p>Name: {{coffee.name}}</p>
+            <p>Stock: {{coffee.stock}}</p>
                 {% if coffee.stock == 0 %}
-                    <p>SOLD OUT</p>
+                    <a href="/coffees/{{coffee.id}}">SOLD OUT</a>
                 {% elif coffee.stock < 5 %}
-                    <p>Speak to your producer!</p>
-            </div>
+                    <a href="/coffees/{{coffee.id}}">Running low will need to order more soon!</p>
+    
             {% endif %}
+        </div>
         {% endfor %}
     </div>
+
 </section>
 {% endblock %}
