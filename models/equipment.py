@@ -8,7 +8,9 @@ class Equipment():
         self.id = id 
 
     def mark_up(self):
-        return ((self.buy_price - self.sell_price) / self.sell_price) * 100
+        if self.buy_price == 0:
+            return self.sell_price * 100
+        return round(((self.sell_price - self.buy_price) / self.buy_price) * 100,2)
 
    
     

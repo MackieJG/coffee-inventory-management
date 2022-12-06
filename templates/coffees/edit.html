@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<section class="edit_container">
     <form action="/coffees/{{coffee.id}}" method="post">
         <div>
             <label for="name">Name:</label>
@@ -36,6 +37,10 @@
             <label for="sell_price">Sell Price:</label>
             <input type="text" id="sell_price" name= "sell_price" value="{{coffee.sell_price}}">
         </div>
-        <input type="submit" value="update_coffee">
+        <div class="update_button">
+            <input type="submit" value="UPDATE COFFEE">
+        </div>
+        
     </form>
+</section>
 {% endblock %}

@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="adding_Kof">
     <a href="producers/newproducer">Add new Producer to your list</a>
+</div>
 {% for producer in all_producers %}
-    <div class="producers">
-        <div class="producer_content">
+    <div class="coffee_content">
+        <div>
             <a href="/producers/{{ producer.id }}">{{producer.name}}</a>
         
-            <div class="producer_location">
+            <div>
                 {{producer.location}}
             </div>
-            <div class="producer_description">
+            <div>
                 {{producer.description}}
             </div>
         </div>

@@ -53,7 +53,7 @@ coffee_repository.save(coffee6)
 
 equipment1 = Equipment('Spirit Coffee Machine', producer9, 0, 10000, 17000)
 equipment2 = Equipment('Water for Coffee', producer6, 10, 6, 9)
-equipment3 = Equipment('250g coffee bags', producer7, 150, 0.4, 0.6)
+equipment3 = Equipment('250g coffee bags', producer7, 150, 1, 2)
 equipment4 = Equipment('moccamaster', producer10, 30, 100, 180)
 equipment5 = Equipment('6oz cups', producer8, 200, 3, 7)
 equipment_repository.save(equipment1)

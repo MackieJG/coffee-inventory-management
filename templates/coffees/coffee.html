@@ -1,16 +1,34 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="coffee_container">
-        <p>Name: {{coffee.name}}</p>
-        <p>Origin: {{coffee.origin}}</p>
-        <p>Description: {{coffee.description}}</p>
-        <p>Producer: {{coffee.producer.name}}</p>
-        <p>{{coffee.stock}} kilos</p>
-        <p>£{{coffee.buy_price}}</p>
-        <p>£{{coffee.sell_price}} per bag</p>
-        <p><a href="/coffees/{{coffee.id}}/edit">Edit</a></p>
-        <form class="delete-form" action="/coffees/{{coffee.id}}/delete" method="POST">
-            <button class="trash-button">Remove it</button>
-          </form>
-    </div>
+    <section class="coffee_container">
+        <div>
+            <p>Name: {{coffee.name}}</p>
+        </div>
+        <div>
+            <p>Origin: {{coffee.origin}}</p>
+        </div>
+        <div>
+            <p>Description: {{coffee.description}}</p>
+        </div>
+        <div>
+            <p>Producer: {{coffee.producer.name}}</p>
+        </div>
+        <div>
+            <p>Stock: {{coffee.stock}} kilos</p>
+        </div>
+        <div>
+            <p>£{{coffee.buy_price}} per bag</p>
+        </div>
+        <div>
+            <p>£{{coffee.sell_price}} per bag</p>
+        </div>
+        <div>
+            <p><a href="/coffees/{{coffee.id}}/edit">Edit</a></p>
+        </div>
+        <div>
+            <form class="delete-form" action="/coffees/{{coffee.id}}/delete" method="POST">
+                <button class="trash-button">Remove</button>
+            </form>
+        </div>
+    </section>
 {% endblock %}

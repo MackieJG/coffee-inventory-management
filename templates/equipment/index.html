@@ -1,22 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="equipment_ref">
     <a href="equipment/new">Add New Equipment to your Inventory</a>
-{% for equipment in all_equipment %}
+</div>
+    {% for equipment in all_equipment %}
     <div class="equipment">
         <div class="equipment_content">
             <a href="/equipment/{{ equipment.id }}">{{equipment.name}}</a>
         
-            <div class="equipment_producer">
-                {{equipment.producer.name}}
+            <div>
+                Producer: {{equipment.producer.name}}
             </div>
-            <div class="equipment_stock">
-                {{equipment.stock}}
+            <div>
+                Stock: {{equipment.stock}}
             </div>
-            <div class="equipment_buy_price">
-                {{equipment.buy_price}}
+            <div>
+                Buy Price: £{{equipment.buy_price}}
             </div>
-            <div class="equipment_sell_price">
-                {{equipment.sell_price}}
+            <div>
+                Sell Price: £{{equipment.sell_price}}
+            </div>
+            <div>
+                Mark up: {{equipment.mark_up()}}%
             </div>
         </div>
     </div>
@@ -24,3 +29,4 @@
 {% endfor %}
 
 {% endblock content %}
+

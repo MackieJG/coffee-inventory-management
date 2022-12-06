@@ -2,6 +2,7 @@ body {
     font-family: "Gill Sans", sans-serif;
     background-color:#afafec;
     background-image: linear-gradient(to bottom right, #5151e8, #afafec);
+    margin: 0px;
 }
 /* This section is for base.html */
 
@@ -17,6 +18,7 @@ body {
     height: 90px;
     overflow: auto;
     list-style-type: none;
+    padding: 0%;
 }
 .header li a{
     color: black;   
@@ -39,6 +41,7 @@ body {
     width: 100%;
     overflow: auto;
     list-style-type: none;
+    padding: 0%;
     
 }
 
@@ -63,13 +66,21 @@ body {
 
 /* next section is for coffee pages */
 
-.adding_kof{
+.adding_Kof{
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-}   
-
+    margin: auto;
+    text-align: center;
+}
+.adding_Kof a{
+    margin: auto;
+    border-style:double;
+    padding: 5px;
+    border-color:#24242e;
+    border-radius: 20px;
+    background-color:rgb(73, 13, 226);
+    color:rgb(245, 245, 232);
+    
+}
 .adding_Kof a:hover{
    text-decoration: none; 
 
@@ -120,4 +131,203 @@ body {
 .coffee_container{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    max-width: 400px;
+    
+}
+
+.coffee_container div{
+    font-size: larger;
+    border-style: groove;
+    padding: 7px;
+    text-align:center;
+    border-color: #04048c;
+    color: white;
+    border-width: 3px;
+}
+
+.coffee_container div a{
+    color: rgb(9, 247, 29);
+    border-style: groove;
+    border-color: #04048c;
+    padding: 10px;
+    border-radius: 10px;
+}
+.coffee_container div a:hover{
+    text-decoration: none;
+}
+.coffee_container div a:visited{
+    text-decoration: none;
+}
+.coffee_container div a:link{
+    text-decoration: none;
+}
+.coffee_container div a:active{
+    text-decoration: none;
+}
+
+.trash-button {
+    background-color: red;
+    border-radius: 10px;
+    padding: 6px;
+    width: 100px;
+}
+
+/* This section covers edit for coffee, equipment and producers. */
+.coffee_edit_container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content:space-around;
+    padding: 8px;
+    justify-content:center;
+    margin: auto;
+    width: 100; 
+}
+.coffee_edit_container label{
+    font-size: larger;
+}
+.coffee_edit_container input{
+    width: 200px;
+    box-sizing:border-box;
+    border: 2px solid rgb(61, 7, 197);
+    border-radius: 10px;
+}
+.coffee_edit_container select{
+    width: 200px;
+    box-sizing:border-box;
+    border: 2px solid rgb(61, 7, 197);
+    border-radius: 10px;
+}
+.producer_edit_container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content:space-around;
+    padding: 8px;
+    justify-content:center;
+    margin: auto;
+    width: 100; 
+}
+.producer_edit_container label{
+    font-size: larger;
+}
+
+.producer_edit_container input{
+    width: 200px;
+    box-sizing:border-box;
+    border: 2px solid rgb(61, 7, 197);
+    border-radius: 10px;
+}
+.container_edit_container select{
+    width: 200px;
+    box-sizing:border-box;
+    border: 2px solid rgb(61, 7, 197);
+    border-radius: 10px;    
+}
+
+.edit_container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content:space-around;
+    padding: 8px;
+    justify-content:center; 
+    
+}
+.edit_container {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    
+}
+.edit_container label {
+    font-size: larger;
+}
+.edit_container input{
+    width: 200px;
+    box-sizing:border-box;
+    border: 2px solid rgb(61, 7, 197);
+    border-radius: 10px;
+}
+
+.edit_container select {
+    width: 200px;
+    box-sizing:border-box;
+    border: 2px solid rgb(61, 7, 197);
+    border-radius: 10px;
+}
+
+.equipment_ref {
+    text-align: center;
+    
+}
+.equipment_ref a{
+    border-style:double;
+    padding: 5px;
+    border-color:#24242e;
+    border-radius: 20px;
+    background-color:rgb(73, 13, 226);
+    color:rgb(245, 245, 232);
+}
+
+.equipment_ref a:hover{
+    text-decoration: none;
+}
+.equipment_ref a:visited{
+    text-decoration: none;
+}
+.equipment_ref a:link {
+    text-decoration: none;
+}
+.equipment_ref a:active{
+    text-decoration: none;
+}
+
+.equipment_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: center;
+    width: 100%;
+    height: 100px;
+    overflow: auto;
+    flex-direction: row;
+    border-style: solid;
+
+}
+.equipment_content a{
+    border-style:double;
+    border-radius: 10px;
+    padding: 5px;
+    background-color:rgb(230, 229, 244);
+    color: black;
+}
+
+.equipment_content a:hover{
+    text-decoration: none;
+}
+.equipment_content a:link{
+    text-decoration: none;
+}
+.equipment_content a:visited{
+    text-decoration: none;
+}
+.equipment_content a:active{
+    text-decoration: none;
+}
+
+.producer_ref {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: center;
+    width: 100%;
+    height: 100px;
+    overflow: auto;
+    flex-direction: row;
+    border-style: solid;
 }

@@ -19,10 +19,12 @@
         {% for coffee in all_coffees %}
             <p>{{coffee.name}}</p>
             <p>{{coffee.stock}}</p>
-            {% if coffee.stock == 0 %}
-            <p>SOLD OUT</p>
-            {% elif coffee.stock < 5 %}
-            <p>Speak to your producer!</p>
+            <div class="sold_out">
+                {% if coffee.stock == 0 %}
+                    <p>SOLD OUT</p>
+                {% elif coffee.stock < 5 %}
+                    <p>Speak to your producer!</p>
+            </div>
             {% endif %}
         {% endfor %}
     </div>
