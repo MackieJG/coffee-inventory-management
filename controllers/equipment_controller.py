@@ -57,3 +57,5 @@ def create_equipment():
     return redirect('/equipment')
 
 
+
+

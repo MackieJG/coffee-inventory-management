@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div>
-        <p>{{coffee.name}}</p>
-        <p>{{coffee.origin}}</p>
-        <p>{{coffee.description}}</p>
-        <p>{{coffee.producer.name}}</p>
+    <div class="coffee_container">
+        <p>Name: {{coffee.name}}</p>
+        <p>Origin: {{coffee.origin}}</p>
+        <p>Description: {{coffee.description}}</p>
+        <p>Producer: {{coffee.producer.name}}</p>
         <p>{{coffee.stock}} kilos</p>
         <p>£{{coffee.buy_price}}</p>
         <p>£{{coffee.sell_price}} per bag</p>
