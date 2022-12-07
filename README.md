@@ -67,7 +67,7 @@ https://github.com/MackieJG/Project_Python_W5
 
 7. To close the running of the app
  - control c
- 
+
 
 
 
