@@ -4,22 +4,22 @@
 
 <div class="coffee_container">
     <div>
-        <p>{{ equipment.name }}</p>
+        <p>Name: {{ equipment.name }}</p>
     </div>
     <div>
-    <p>{{ equipment.producer.name }}</p>
+        <p>Producer: {{ equipment.producer.name }}</p>
     </div>
     <div>
-        <p>{{ equipment.stock }}</p>
+        <p>Stock: {{ equipment.stock }}</p>
     </div>
     <div>
-    <p>{{ equipment.buy_price }}</p>
+        <p>Buy Price: £{{ equipment.buy_price }}</p>
     </div>
     <div>
-    <p>{{ equipment.sell_price }}</p>
+        <p>Sell Price: £{{ equipment.sell_price }}</p>
     </div>
     <div>
-    <p><a href="/equipment/{{equipment.id}}/edit">Edit</a></p>
+        <p><a href="/equipment/{{equipment.id}}/edit">Edit</a></p>
     </div>
     <div>
     <form class="delete-form" action="/equipment/{{equipment.id}}/delete" method="POST">
