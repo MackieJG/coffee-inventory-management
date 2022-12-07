@@ -359,3 +359,33 @@ body {
     border-style: double;
     font-size: large;
 }
+
+.producer_content {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    border-style: solid;
+}
+
+.producer_content a{
+    color: rgb(206, 185, 185);
+    
+}
+
+.producer_content a:hover{
+    text-decoration: none;
+}
+.producer_content a:visited{
+    text-decoration: none;
+}
+.producer_content a:link{
+    text-decoration: none;
+}
+.producer_content a:active{
+    text-decoration: none;
+}
+
+.producer-item {
+    min-width: 320px;
+    text-align: center;
+}

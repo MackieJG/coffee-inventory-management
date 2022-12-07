@@ -5,15 +5,15 @@
 </div>
 {% for producer in all_producers %} 
     <div class="producer_content">
-        <div>
+        <div class="producer-item">
             <a href="/producers/{{ producer.id }}">{{producer.name}}</a>
         </div>
-            <div>
-                {{producer.location}}
-            </div>
-            <div>
-                {{producer.description}}
-            </div>
+        <div class="producer-item">
+            {{producer.location}}
+        </div>
+        <div class="producer-item">
+            {{producer.description}}
+        </div>
     </div>
     
 {% endfor %}
