@@ -1,4 +1,4 @@
-Your Inventoruy Manager App
+Your Inventory Manager App
 
 Build an App that keeps track of your Inventory for Coffee Shop/Roaster
 
