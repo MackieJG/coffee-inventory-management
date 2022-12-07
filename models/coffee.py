@@ -1,3 +1,5 @@
+import time
+
 class Coffee():
     def __init__(self, name, origin, description, producer, stock, buy_price, sell_price, id = None):
         self.name = name
@@ -15,4 +17,11 @@ class Coffee():
         return round(((self.sell_price - self.buy_price) / self.buy_price) * 100,2)
 
 
-   
+    def coffee_auction_countdown(self):
+        duration = 60
+        while duration > 0:
+            time.sleep(1)
+            duration -= 1
+            return duration
+        return "It's Auction Time!"
+
