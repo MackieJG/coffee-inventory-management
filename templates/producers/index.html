@@ -3,19 +3,20 @@
 <div class="adding_Kof">
     <a href="producers/newproducer">Add new Producer to your list</a>
 </div>
-{% for producer in all_producers %} 
-    <div class="producer_content">
-        <div class="producer-item">
-            <a href="/producers/{{ producer.id }}">{{producer.name}}</a>
-        </div>
-        <div class="producer-item">
-            {{producer.location}}
-        </div>
-        <div class="producer-item">
-            {{producer.description}}
-        </div>
-    </div>
-    
-{% endfor %}
 
+    <table class="coffee_content">
+        <tr>
+            <th>Producer Name</th>
+            <th>Location</th>
+            <th>Description</th>
+        </tr>
+{% for producer in all_producers %} 
+        <tr>
+            <td><a href="/producers/{{ producer.id }}">{{producer.name}}</a></td>
+            <td>{{producer.location}}</td>
+            <td>{{producer.description}}</td>
+        </tr>
+
+{% endfor %}
+</table>
 {% endblock content %}

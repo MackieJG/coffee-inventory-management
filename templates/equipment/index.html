@@ -1,32 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="equipment_ref">
+<div class="adding_Kof">
     <a href="equipment/new">Add New Equipment to your Inventory</a>
 </div>
-    {% for equipment in all_equipment %}
-    <div class="equipment">
-        <div class="equipment_content">
-            <a href="/equipment/{{ equipment.id }}">{{equipment.name}}</a>
-        
-            <div>
-                Producer: {{equipment.producer.name}}
-            </div>
-            <div>
-                Stock: {{equipment.stock}}
-            </div>
-            <div>
-                Buy Price: £{{equipment.buy_price}}
-            </div>
-            <div>
-                Sell Price: £{{equipment.sell_price}}
-            </div>
-            <div>
-                Mark up: {{equipment.mark_up()}}%
-            </div>
-        </div>
-    </div>
-    
+    <table class="coffee_content">
+        <tr>
+            <th>Product Name</th>
+            <th>Producer</th>
+            <th>Stock</th>
+            <th>Buy Price</th>
+            <th>Sell Price</th>
+            <th>Mark Up</th>
+        </tr>
+    {% for equipment in all_equipment %}   
+        <tr>
+            <td><a href="/equipment/{{ equipment.id }}">{{equipment.name}}</a></td>
+            <td>{{equipment.producer.name}}</td>
+            <td>{{equipment.stock}}</td>
+            <td>£{{equipment.buy_price}}</td>
+            <td>£{{equipment.sell_price}}</td>
+            <td>{{equipment.mark_up()}}%</td>
+        </tr>
 {% endfor %}
-
+        </table>    
 {% endblock content %}
 

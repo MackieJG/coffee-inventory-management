@@ -2,30 +2,31 @@
 {% block content %}
 <div class="adding_Kof">
     <a href="coffees/newcoffee">Add New Coffee to your Inventory</a>
-</div>
+    </div>
+    
+                <table class="coffee_content">
+                    <tr>
+                        <th>Name</th>
+                        <th>Origin</th>
+                        <th>Varietal & Process</th>
+                        <th>Producer</th>
+                        <th>Stock</th>
+                        <th>Buy Price</th>
+                        <th>Sell Price</th>
+                        <th>Mark Up %</th>
+                    </tr>
 {% for coffee in all_coffees %}
-        <div class="coffee_content">
-            <a href="/coffees/{{coffee.id}}">{{coffee.name}}</a>
-        
-            <div class="coffee_origin">
-                Origin: {{coffee.origin}}
-            </div>
-            <div class="coffee_description">
-                Varietal & Process: {{coffee.description}}
-            </div>
-            <div class="coffee_producer">
-                Producer: {{coffee.producer.name}}
-            </div>
-            <div class="coffee_stock">
-                Stock: {{coffee.stock}}kg
-            </div>
-            <div class="coffee_buy_price">
-                £{{coffee.buy_price}} per 250g
-            </div>
-            <div class="coffee_sell_price">
-                £{{coffee.sell_price}} per 250g
-            </div>
-        </div>
-{% endfor %}
+                <tr>
+                    <td><a href="/coffees/{{coffee.id}}">{{coffee.name}}</a></td>
+                    <td>{{coffee.origin}}</td>
+                    <td>{{coffee.description}}</td>
+                    <td>{{coffee.producer.name}}</td> 
+                    <td>{{coffee.stock}}kg</td>
+                    <td>£{{coffee.buy_price}}per 250g</td>
+                    <td>£{{coffee.sell_price}}per 250g</td>
+                    <td>{{coffee.mark_up()}}%</td>
+                </tr>
 
+{% endfor %}
+</table>
 {% endblock content %}
