@@ -306,7 +306,7 @@ table.coffee_content a:active{
 .equipment_ref a:active{
     text-decoration: none;
 }
-/* YOURE HERE */
+
 
 
 .producer_ref {
@@ -334,14 +334,38 @@ table.coffee_content a:active{
     border-style: solid;
    
 }
-.inventory_section{
+table.inventory_content{
+
+    border-collapse: collapse;
+    width: 60%;
+}
+table.inventory_content th, table.inventory_section td{
+    border: 1px solid black;
+    padding: 8px;
     text-align: center;
-    border-style: double;
     
 }
-.inventory_section div{
-    border-style: double;
-    font-size: large;
+table.inventory_content tr:nth-child(even) {
+    background-color: #657beb;
+  }
+
+
+table.inventory_content a{
+    color: rgb(206, 185, 185);
+    
+}
+
+table.inventory_content a:hover{
+    text-decoration: none;
+}
+table.inventory_content a:visited{
+    text-decoration: none;
+}
+table.inventory_content a:link{
+    text-decoration: none;
+}
+table.inventory_content a:active{
+    text-decoration: none;
 }
 
 .producer_content {

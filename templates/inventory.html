@@ -1,36 +1,41 @@
 {% extends 'base.html' %}
 {% block content %}
-<section class="inventory_section">
-    <div>
-        <h4>Everything You Have</h4>
-        {% for equipment in all_equipment %}
-        <div>
-            <p>Name: {{equipment.name}}</p>
-            <p>Stock: {{equipment.stock}}</p>
-            {% if equipment.stock == 0 %}
-                <p>SOLD OUT</p>
-                {% elif equipment.stock < 5 %}
-                <p>Speak to your producer!</p>
-            {% endif %}
-        </div>
-        {% endfor %}
-    </div>
-</section>
-<section class="inventory_section">
-    <div>
-        {% for coffee in all_coffees %}
-        <div>
-            <p>Name: {{coffee.name}}</p>
-            <p>Stock: {{coffee.stock}}</p>
-                {% if coffee.stock == 0 %}
-                    <a href="/coffees/{{coffee.id}}">SOLD OUT</a>
-                {% elif coffee.stock < 5 %}
-                    <a href="/coffees/{{coffee.id}}">Running low will need to order more soon!</p>
-    
-            {% endif %}
-        </div>
-        {% endfor %}
-    </div>
 
-</section>
-{% endblock %}
+        <h4>Stock</h4>
+        <table class="inventory_content" style="margin-bottom: 20px;">
+            <tr>
+                <th>Name</th>
+                <th>Stock</th>
+                <th></th>
+                
+            </tr>
+        {% for equipment in all_equipment %}
+            <tr>
+                 <td>{{equipment.name}}</td>
+                 <td>{{equipment.stock}}</td>
+        {% if equipment.stock == 0 %}
+                <td><a href="/equipment/{{equipment.id}}">SOLD OUT</a></td>
+                <td>{% elif equipment.stock < 5 %}</td>
+                <td><a href="/equipment/{{equipment.id}}">Speak to your producer!</a></td>
+                        {% endif %}
+             </tr>
+        {% endfor %}
+        </table>
+        <table class="coffee_content" style="margin-top: 20px;">
+            <tr>
+                <td>Name</td>
+                <td>Stock</td>
+            </tr>
+        {% for coffee in all_coffees %}
+            <tr>
+            <td>{{coffee.name}}</td>
+            <td>{{coffee.stock}}</td>
+                {% if coffee.stock == 0 %}
+                    <td><a href="/coffees/{{coffee.id}}">SOLD OUT</a></td>
+                {% elif coffee.stock < 5 %}
+                    <td><a href="/coffees/{{coffee.id}}">Running low will need to order more soon!</a></td>
+                    {% endif %}
+            </tr>
+        {% endfor %}
+        </table>
+{% endblock content %}
